@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charles City Appraisal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Smooth scrolling for anchor links */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased">
+
+    <nav class="bg-white shadow-md py-4 px-6 fixed w-full top-0 z-40">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-extrabold text-slate-800 tracking-tight flex items-center gap-2">
+                <i class="fa-solid fa-house-chimney text-blue-600"></i> Charles City Appraisal
+            </h1>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold items-center">
+                <a href="#services" class="hover:text-blue-600 transition">Services</a>
+                <a href="#reviews" class="hover:text-blue-600 transition">Reviews</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg transition shadow-sm">
+                    <i class="fa-solid fa-envelope mr-1"></i> Get a Quote
+                </a>
+                <a href="mailto:Charlierob1225@gmail.com?subject=Resume%20Submission" class="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-lg transition shadow-sm">
+                    <i class="fa-solid fa-briefcase mr-1"></i> Submit Resume
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative bg-cover bg-center text-white py-40 px-6 text-center mt-16" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        <div class="absolute inset-0 bg-slate-900 bg-opacity-75"></div>
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h2 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">Accurate, Reliable Real Estate Appraisals</h2>
+            <p class="text-xl md:text-2xl text-slate-200 mb-10 font-light">Serving Tallahassee with expert residential, commercial, and estate valuation services.</p>
+            <div class="flex justify-center gap-4">
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 px-8 rounded-full transition shadow-lg flex items-center gap-2 text-lg">
+                    Request an Appraisal <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h3 class="text-4xl font-bold text-slate-800 mb-4">Our Expertise</h3>
+            <div class="w-24 h-1 bg-blue-600 mx-auto rounded"></div>
+            <p class="text-slate-500 mt-4">Click on any service below to see full details.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-10">
+            <div onclick="openModal('modal-residential')" class="cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100 hover:-translate-y-2 hover:shadow-xl transition duration-300 group">
+                <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Residential Home" class="w-full h-48 object-cover group-hover:opacity-90 transition">
+                <div class="p-8">
+                    <h4 class="text-2xl font-bold mb-3 text-slate-800 flex items-center gap-2">
+                        <i class="fa-solid fa-house-user text-blue-600"></i> Residential
+                    </h4>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Comprehensive valuations for single-family homes, condos, and multi-family properties. Essential for buying, selling, or refinancing.</p>
+                    <span class="text-blue-600 font-bold flex items-center gap-1 group-hover:text-blue-800">
+                        View Full Details <i class="fa-solid fa-chevron-right text-sm"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div onclick="openModal('modal-estate')" class="cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100 hover:-translate-y-2 hover:shadow-xl transition duration-300 group">
+                <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Estate Document" class="w-full h-48 object-cover group-hover:opacity-90 transition">
+                <div class="p-8">
+                    <h4 class="text-2xl font-bold mb-3 text-slate-800 flex items-center gap-2">
+                        <i class="fa-solid fa-scale-balanced text-blue-600"></i> Estate
+                    </h4>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Sensitive and accurate retrospective appraisals for date-of-death valuations, inheritance planning, and tax purposes.</p>
+                    <span class="text-blue-600 font-bold flex items-center gap-1 group-hover:text-blue-800">
+                        View Full Details <i class="fa-solid fa-chevron-right text-sm"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div onclick="openModal('modal-commercial')" class="cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100 hover:-translate-y-2 hover:shadow-xl transition duration-300 group">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Commercial Building" class="w-full h-48 object-cover group-hover:opacity-90 transition">
+                <div class="p-8">
+                    <h4 class="text-2xl font-bold mb-3 text-slate-800 flex items-center gap-2">
+                        <i class="fa-solid fa-city text-blue-600"></i> Commercial
+                    </h4>
+                    <p class="text-slate-600 mb-6 leading-relaxed">In-depth market analysis and valuation for retail spaces, offices, industrial properties, and vacant land.</p>
+                    <span class="text-blue-600 font-bold flex items-center gap-1 group-hover:text-blue-800">
+                        View Full Details <i class="fa-solid fa-chevron-right text-sm"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="bg-slate-100 py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-slate-800 mb-4">What Our Clients Say</h3>
+                <div class="w-24 h-1 bg-blue-600 mx-auto rounded"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-200 relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-slate-200 absolute top-6 right-6"></i>
+                    <div class="flex text-yellow-400 mb-4 text-lg">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-6 leading-relaxed">"Very professional and extremely fast turnaround. The appraisal was thorough and exactly what we needed for our refinancing."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah M." class="w-12 h-12 rounded-full border-2 border-blue-100">
+                        <p class="font-bold text-slate-800">Sarah M.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-200 relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-slate-200 absolute top-6 right-6"></i>
+                    <div class="flex text-yellow-400 mb-4 text-lg">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-6 leading-relaxed">"Charles City Appraisal handled our estate valuation with absolute professionalism and sensitivity. Highly recommend their services."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David R." class="w-12 h-12 rounded-full border-2 border-blue-100">
+                        <p class="font-bold text-slate-800">David R.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-200 relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-slate-200 absolute top-6 right-6"></i>
+                    <div class="flex text-yellow-400 mb-4 text-lg">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-6 leading-relaxed">"Deep knowledge of the Tallahassee market. The commercial appraisal provided was highly detailed and accurate for our new retail space."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="James T." class="w-12 h-12 rounded-full border-2 border-blue-100">
+                        <p class="font-bold text-slate-800">James T.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-slate-900 text-slate-300 py-16 px-6 border-t-4 border-blue-600">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+            <div>
+                <h3 class="text-3xl font-bold text-white mb-6 flex items-center gap-2">
+                    <i class="fa-solid fa-house-chimney text-blue-500"></i> Charles City Appraisal
+                </h3>
+                <div class="space-y-4">
+                    <p class="flex items-center gap-3 text-lg">
+                        <i class="fa-solid fa-user text-blue-500 w-5"></i> Charles Robinson
+                    </p>
+                    <p class="flex items-start gap-3 text-lg">
+                        <i class="fa-solid fa-location-dot text-blue-500 w-5 mt-1"></i> 
+                        <span>1274 Millstream Rd.<br>Tallahassee, FL 32312</span>
+                    </p>
+                    <p class="flex items-center gap-3 text-xl text-white font-bold mt-4">
+                        <i class="fa-solid fa-phone text-blue-500 w-5"></i> (248) 510-2165
+                    </p>
+                </div>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="bg-slate-800 p-8 rounded-2xl">
+                    <h4 class="text-2xl font-bold text-white mb-4">Ready to get started?</h4>
+                    <p class="mb-6 text-slate-400">Call us directly to schedule your professional appraisal today.</p>
+                    <a href="tel:2485102165" class="w-full block text-center bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 px-6 rounded-lg transition shadow-lg text-lg mb-4">
+                        <i class="fa-solid fa-phone-volume mr-2"></i> Call Now
+                    </a>
+                </div>
+
+                <div class="bg-slate-800 p-8 rounded-2xl">
+                    <h4 class="text-2xl font-bold text-white mb-4">
+                        <i class="fa-solid fa-briefcase text-blue-500 mr-2"></i> Join Our Team
+                    </h4>
+                    <p class="mb-6 text-slate-400">Interested in working with us? Submit your resume and we'll be in touch.</p>
+                    <a href="mailto:Charlierob1225@gmail.com?subject=Resume%20Submission" class="w-full block text-center bg-green-600 hover:bg-green-500 text-white font-bold py-4 px-6 rounded-lg transition shadow-lg text-lg">
+                        <i class="fa-solid fa-paper-plane mr-2"></i> Submit Your Resume
+                    </a>
+                    <p class="mt-3 text-slate-500 text-sm text-center">
+                        <i class="fa-solid fa-envelope mr-1"></i> Charlierob1225@gmail.com
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-800 text-center text-slate-500 text-sm flex justify-center items-center">
+            <p>&copy; 2026 Charles City Appraisal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="modal-residential" class="fixed inset-0 bg-slate-900 bg-opacity-80 z-50 hidden flex items-center justify-center p-4 transition-opacity">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
+            <button onclick="closeModal('modal-residential')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-800 text-2xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Residential" class="w-full h-64 object-cover">
+            <div class="p-8">
+                <h3 class="text-3xl font-bold text-slate-800 mb-4">Residential Appraisals</h3>
+                <p class="text-slate-600 mb-4 leading-relaxed">Our residential appraisal services provide accurate, heavily researched valuations for single-family homes, townhouses, and condominiums across the Tallahassee area. We utilize the Uniform Residential Appraisal Report (URAR) and the latest market data to ensure complete accuracy.</p>
+                <h4 class="text-lg font-bold text-slate-800 mb-2">Common reasons for residential appraisals:</h4>
+                <ul class="list-disc pl-5 space-y-2 text-slate-600 mb-6">
+                    <li>Primary Mortgage Financing & Refinancing</li>
+                    <li>Pre-Listing Appraisals for Sellers</li>
+                    <li>PMI (Private Mortgage Insurance) Removal</li>
+                    <li>Divorce Settlement & Asset Division</li>
+                </ul>
+                <a href="tel:2485102165" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition">
+                    Call to Schedule
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-estate" class="fixed inset-0 bg-slate-900 bg-opacity-80 z-50 hidden flex items-center justify-center p-4 transition-opacity">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
+            <button onclick="closeModal('modal-estate')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-800 text-2xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Estate" class="w-full h-64 object-cover">
+            <div class="p-8">
+                <h3 class="text-3xl font-bold text-slate-800 mb-4">Estate & Probate Appraisals</h3>
+                <p class="text-slate-600 mb-4 leading-relaxed">Settling an estate requires a highly specific type of property valuation. Often, you will need a "retrospective appraisal" that determines the fair market value of a property based on a prior date (such as a date of death), rather than the current date.</p>
+                <h4 class="text-lg font-bold text-slate-800 mb-2">Our Estate Services Include:</h4>
+                <ul class="list-disc pl-5 space-y-2 text-slate-600 mb-6">
+                    <li>Date of Death Valuations for IRS / Tax Purposes</li>
+                    <li>Step-Up in Basis Determinations</li>
+                    <li>Trust Planning & Asset Management</li>
+                    <li>IRS-Compliant Narrative Reports</li>
+                </ul>
+                <p class="text-slate-600 italic mb-6">We work directly with executors, CPAs, and estate attorneys to provide seamless, confidential service.</p>
+                <a href="tel:2485102165" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition">
+                    Call to Schedule
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-commercial" class="fixed inset-0 bg-slate-900 bg-opacity-80 z-50 hidden flex items-center justify-center p-4 transition-opacity">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
+            <button onclick="closeModal('modal-commercial')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-800 text-2xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Commercial" class="w-full h-64 object-cover">
+            <div class="p-8">
+                <h3 class="text-3xl font-bold text-slate-800 mb-4">Commercial Property Appraisals</h3>
+                <p class="text-slate-600 mb-4 leading-relaxed">Commercial real estate requires complex analysis, including income capitalization approaches, rent roll analysis, and deep local market knowledge. We provide comprehensive narrative reports tailored to the scope of your commercial needs.</p>
+                <h4 class="text-lg font-bold text-slate-800 mb-2">We Appraise Property Types Including:</h4>
+                <ul class="list-disc pl-5 space-y-2 text-slate-600 mb-6">
+                    <li>Retail Centers & Standalone Stores</li>
+                    <li>Office Buildings & Medical Facilities</li>
+                    <li>Industrial Warehouses</li>
+                    <li>Multi-Family Apartment Complexes</li>
+                    <li>Vacant Land & Development Sites</li>
+                </ul>
+                <a href="tel:2485102165" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition">
+                    Call to Schedule
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Open Modal
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        // Close Modal
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Close modal when clicking outside of the white box
+        window.onclick = function(event) {
+            const modals = ['modal-residential', 'modal-estate', 'modal-commercial'];
+            modals.forEach(id => {
+                const modal = document.getElementById(id);
+                if (event.target === modal) {
+                    closeModal(id);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
